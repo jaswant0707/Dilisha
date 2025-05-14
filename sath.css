@@ -1,0 +1,68 @@
+.jassu-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .jassu-today-count {
+      font-size: 1.5rem;
+      color: #ffffff; /* Yellow but now light golden for vibe */
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .jassu-main-text {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      color: #627fff;; /* Soft Light Green */
+    }
+
+    .jassu-highlight {
+      color: #ff1744; /* Romantic Red */
+      font-weight: bold;
+    }
+
+    .jassu-romantic {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #d1c4e9; /* Light Lavender Pink */
+      margin-top: 12px;
+    }
+
+    .jassu-radhe {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #ffffff; /* Fresh Friendship Green */
+    }
+
+    .jassu-heart {
+      color: #ff1744; /* Bright Romantic Red */
+      font-size: 1.7rem;
+    }
+
+    .jassu-heart-float {
+      position: absolute;
+      bottom: -20px;
+      font-size: 24px;
+      animation: jassuFloatUp 4s linear infinite;
+      color: #ff4081;
+      opacity: 0.8;
+    }
+
+    @keyframes jassuFloatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }

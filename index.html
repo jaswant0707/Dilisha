@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script&family=Great+Vibes&family=Pacifico&family=Satisfy&family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet" />
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+
+
+   <link rel="stylesheet" href="fullscreen.css">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="ab.css">
+  <link rel="stylesheet" href="age.css">
+  <link rel="stylesheet" href="first.css">
+  <link rel="stylesheet" href="type.css">  
+  <link rel="stylesheet" href="game.css"> 
+  <link rel="stylesheet" href="heart.css">   
+  <link rel="stylesheet" href="ii.css">  
+  <link rel="stylesheet" href="sath.css">  
+ <link rel="stylesheet" href="night.css">  
+ <link rel="stylesheet" href="jaswant.css"> 
+  <link rel="stylesheet" href="shayari.css"> 
+ 
+  <title>Beastie!</title>
+  <style>
+
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+   }
+   
+
+      body{
+	  
+	   text-align:center;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+	  }
+/* Full-screen overlay: now black background */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #000;           /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Dot-bounce loader: size adjustable via --loader-size */
+:root {
+  --loader-size: 40px;        /* Change this for bigger/smaller */
+}
+
+.loader {
+  display: inline-flex;
+  gap: calc(var(--loader-size) * 0.25);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: var(--loader-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(#222 0 0) top/100% 40% no-repeat,
+    radial-gradient(farthest-side,#000 95%,#0000) 50%/10% 10% no-repeat #fff;
+  animation: l7 1.5s infinite alternate ease-in;
+}
+@keyframes l7 {
+  0%, 70%   { background-size:100% 40%,10% 10% }
+  85%       { background-size:100% 120%,10% 10% }
+  100%      { background-size:100% 40%,10% 10% }
+}
+ 
+	.z, .a, .b, .c, .d, .e, .f, .g, .h, .i, .k, .l, .m {
+      display: none;
+	  
+	  }
+ .active {
+      display: block;
+    }
+   button {
+    
+    
+     
+	
+	gap: 5px;
+    font-size: 1.1rem;
+   
+    cursor: pointer;
+    
+}
+
+ .animated-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: linear-gradient(-30deg, rgb(255 5 5 / 76%) 50%, #ff217d 50%);
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #f7d4d4;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: -1px 2px 3px 3px rgb(194 247 106);
+    }
+
+    .animated-button::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #ad8585;
+      opacity: 0;
+      transition: .2s opacity ease-in-out;
+    }
+    .animated-button:hover::before { opacity: 0.2; }
+
+    .animated-button span { position: absolute; }
+
+    /* Top */
+    .animated-button span:nth-child(1) { top:0; left:0; width:100%; height:2px;
+      background: linear-gradient(to left, rgba(43,8,8,0), #00008B);
+      animation: animateTop 2s linear infinite;
+    }
+    @keyframes animateTop {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Right */
+    .animated-button span:nth-child(2) { top:0; right:0; width:2px; height:100%;
+      background: linear-gradient(to top, rgba(43,8,8,0), #00008B);
+      animation: animateRight 2s linear -1s infinite;
+    }
+    @keyframes animateRight {
+      0%   { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+
+    /* Bottom */
+    .animated-button span:nth-child(3) { bottom:0; left:0; width:100%; height:2px;
+      background: linear-gradient(to right, rgba(43,8,8,0), #00008B);
+      animation: animateBottom 2s linear infinite;
+    }
+    @keyframes animateBottom {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Left */
+    .animated-button span:nth-child(4) { top:0; left:0; width:2px; height:100%;
+      background: linear-gradient(to bottom, rgba(43,8,8,0), #00008B);
+      animation: animateLeft 2s linear -1s infinite;
+    }
+    @keyframes animateLeft {
+      0%   { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+   
+     .no-animate {
+           cursor: pointer;
+	 }
+	  #musicIcon {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+
+  animation: rotate 4s linear infinite, bgMove 15s ease infinite;
+  animation-play-state: paused, running; /* rotate paused by default, bg runs */
+
+  background: linear-gradient(270deg, #ff3b3f, #0088ff, #00ffb3, #ffbf00);
+  background-size: 800% 800%; /* Yeh line important hai */
+  transition: background 1s ease;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#musicPopup {
+  position: fixed;
+  top: 60px;
+  
+  z-index: 10000;
+  background: linear-gradient(to bottom, #ffe1e1, #b7577fc2, #ffe1e1);
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: none;
+  animation: popupFade 0.5s ease;
+}
+
+.popup-box {
+  text-align: center;
+  font-family: cursive;
+  color: #333;
+  
+  
+  height: 90vh;                  /* 60% of screen height */
+  overflow-y: auto;
+
+  scrollbar-width: none;         
+  -ms-overflow-style: none;     
+}
+
+.popup-box::-webkit-scrollbar {
+  display: none;                
+}
+
+.popup-box .arrow {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(255,255,255,0.95);
+}
+.popup-box .dd {
+  position: absolute;
+  top: -10px;
+  Left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(255,255,255,0.95);
+}
+#musicPopup button {
+  margin-top: 12px;
+  padding: 6px 16px;
+  border: none;
+  margin-bottom: 40px;
+  background-color: #ff3b3f;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes popupFade {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.h video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+  background: black;
+}
+
+
+.playVideoBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  display: none;
+}
+
+  .last-page {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #1b5ff9, #fc2dfd);
+    border-radius: 20px;
+    margin: 40px 20px;
+    box-shadow: 0px 1px 20px 9px rgb(194 0 39);
+    animation: fadeIn 1s ease;
+  }
+
+  .last-page h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff8f8;
+  }
+
+  .last-page p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .last-page ul {
+    text-align: left;
+    font-size: 17px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .last-page ul li::before {
+    content: "🌟 ";
+  }
+
+ 
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .last-page {
+      padding: 30px 15px;
+    }
+
+    .last-page h2 {
+      font-size: 26px;
+    }
+
+    .last-page p, .last-page ul {
+      font-size: 16px;
+    }
+
+</style>
+<body class="fullscreen-active">
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll("button").forEach(btn => {
+    // Skip buttons with .no-animate OR data-no-animate
+    if (btn.classList.contains("no-animate")) return;
+    if (btn.hasAttribute('data-no-animate')) return;
+
+    // Otherwise add animation class + spans
+    if (!btn.classList.contains("animated-button")) {
+      btn.classList.add("animated-button");
+      const spans = btn.querySelectorAll("span");
+      if (spans.length < 4) {
+        for (let i = 0; i < 4; i++) {
+          btn.appendChild(document.createElement("span"));
+        }
+      }
+    }
+  });
+});
+</script>
+
+<div id="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- 2) Fullscreen Overlay -->
+  <div id="overlay">
+    <button id="fullscreenBtn" data-no-animate onclick="enterFullscreen()"  title="Enter Fullscreen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" class="icon">
+        <!-- Expand corners -->
+        <polyline points="4 10 4 4 10 4"></polyline>
+        <polyline points="14 4 20 4 20 10"></polyline>
+        <polyline points="4 14 4 20 10 20"></polyline>
+        <polyline points="14 20 20 20 20 14"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <!-- 3) Music Guide Popup -->
+  <div id="musicPopup">
+   
+    <div class="popup-box">
+      <div class="arrow"></div>
+	  <div class="dd"></div>
+	 <h3 style="
+    font-size: 2rem;
+    text-shadow: 4px 4px 4px #d413c7;
+    color: royalblue;
+"> Happy Birthday, <br>You Amazing Soul! </h3>
+  <p>Here’s a little code that’s packed with love ❤️ and happiness 😊, just for you!</p>
+	  <hr><br>
+      <h4>🎵 Music Icon Guide</h4>
+<p>
+  Tap once 👉🏻 Next Song<br>
+  Double Tap 👉🏻 Previous Song<br>
+  Hold 2s 👉🏻 Pause/Resume<br>
+  <strong>Over 30+ tracks –  including your favorite 🎶..</strong><br>
+  If one doesn’t feel right, tap it away ✌️ and let the good vibes roll. With your earphones 🎧, feel the beat and lose yourself in the vibe 🌟!
+</p>
+<hr><br>
+
+<h4>[ ] Square Box Guide</h4>
+<p>
+  Tap once 👉🏻 Full-screen<br>
+  Tap second time 👉🏻 Normal-screen<br>
+ 
+</p>
+<hr><br>
+	  <p>
+This code is lovingly crafted for **Dilisha – the one and only Beastie** 😁💘. Birthday vibes + happiness + thoda sa flirting 😜 = total blast! Yeh code mein hai sweetness 🍬, care 💕, aur full-on lovely moments 💞.So Beastie ji... if you don’t mind, then why wait? Tap that button and let the magic begin! 🎧🌈 Your vibes are waiting with smiles, surprises, and soft feels 🥰✨
+</p>
+	  <h2>👇🏻👇🏻</h2>
+      <button onclick="closePopup()">OK, Got it!</button>
+    </div>
+  </div>
+
+  <!-- 4) Music Icon -->
+  <svg id="musicIcon" xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 24 24" style="fill: transparent; stroke: #000;">
+    <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+  </svg>
+
+  <!-- 5) Audio Element -->
+  <audio id="audioPlayer" muted playsinline webkit-playsinline preload="auto" style="display:none;">
+    <source src="./2.mp3" type="audio/mp3"/>
+  </audio>
+
+  <!-- 6) Script -->
+  <script>
+    const originalBg = getComputedStyle(document.body).background;
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.getElementById("page-loader").style.display = "none";
+        document.getElementById("overlay").style.display    = "block";
+      document.getElementById("musicPopup").style.display = "block";
+      document.getElementById("musicIcon").style.display  = "block";
+      document.body.style.background = "rgba(0,0,0,0.85)";
+      }, 2000);
+    });
+
+    function enterFullscreen() {
+      if (!document.fullscreenElement) {
+      const elem = document.documentElement;
+      if (elem.requestFullscreen) elem.requestFullscreen();
+      else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+      else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      else if (document.msExitFullscreen) document.msExitFullscreen();
+    }
+
+     
+    }
+
+    function closePopup() {
+      document.getElementById("musicPopup").style.display  = "none";
+      document.body.style.background                       = originalBg;
+      document.getElementById("mainContent").style.display = "block";
+
+      const audio = document.getElementById("audioPlayer");
+      const icon  = document.getElementById("musicIcon");
+      audio.muted  = false;
+      audio.volume = 1.0;
+      audio.play().then(() => {
+        icon.style.animationPlayState = 'running';
+      }).catch(err => console.warn("Play failed:", err));
+
+      initMusicIcon();
+    }
+
+    function initMusicIcon() {
+      const icon   = document.getElementById("musicIcon");
+      const audio  = document.getElementById("audioPlayer");
+      const songs  = ["./2.mp3","./3.mp3","./4.mp3","./5.mp3","./6.mp3","./7.mp3","./8.mp3","./9.mp3","./10.mp3","./11.mp3","./12.mp3","./13.mp3","./14.mp3","./15.mp3","./16.mp3","./17.mp3","./18.mp3","./19.mp3","./20.mp3","./21.mp3","./22.mp3","./23.mp3","./24.mp3","./25.mp3","./26.mp3","./27.mp3","./28.mp3","./29.mp3","./30.mp3","./31.mp3","./1.mp3"];
+      let current   = 0, isPlaying = true, tapTimer = null, holdTimer = null, downTime = 0;
+
+      function ensurePlayOnce() {
+        if (!isPlaying) {
+          audio.muted = true;
+          audio.play().then(() => {
+            audio.muted = false;
+            isPlaying = true;
+            icon.style.animationPlayState = 'running';
+            document.documentElement.removeEventListener("pointerdown", ensurePlayOnce, true);
+          }).catch(err => console.warn("Autoplay blocked:", err));
+        }
+      }
+      document.documentElement.addEventListener("pointerdown", ensurePlayOnce, true);
+
+      audio.addEventListener("ended", () => { if (isPlaying) playNext(); });
+
+      function playNext() {
+        current = (current + 1) % songs.length;
+        audio.src = songs[current]; audio.load();
+        audio.play().then(() => { isPlaying = true; icon.style.animationPlayState = 'running'; })
+          .catch(err => console.warn("Next song failed:", err));
+      }
+      function playPrevious() {
+        current = (current - 1 + songs.length) % songs.length;
+        audio.src = songs[current]; audio.load();
+        audio.play().then(() => { isPlaying = true; icon.style.animationPlayState = 'running'; })
+          .catch(err => console.warn("Previous song failed:", err));
+      }
+
+      icon.addEventListener("pointerdown", e => {
+        e.stopPropagation(); downTime = Date.now();
+        holdTimer = setTimeout(() => {
+          if (audio.paused) audio.play().then(() => { isPlaying = true; icon.style.animationPlayState = 'running'; })
+                            .catch(err => console.warn("Resume failed:", err));
+          else { audio.pause(); isPlaying = false; icon.style.animationPlayState = 'paused'; }
+          holdTimer = null;
+        }, 1000);
+      });
+
+      icon.addEventListener("pointerup", e => {
+        e.stopPropagation();
+        if (holdTimer) {
+          clearTimeout(holdTimer); holdTimer = null;
+          if (tapTimer) {
+            clearTimeout(tapTimer); tapTimer = null;
+            playPrevious();
+          } else {
+            tapTimer = setTimeout(() => {
+              tapTimer = null;
+              if (audio.paused) audio.play().then(() => { isPlaying = true; icon.style.animationPlayState = 'running'; })
+                                 .catch(err => console.warn("Play failed:", err));
+              else playNext();
+            }, 300);
+          }
+        }
+      });
+    }
+  </script>
+<!-- 5) Main Content -->
+ <div id="mainContent">
+
+<div class="z active" style=" background: radial-gradient(ellipse at bottom, #0d1a26, #00000061);
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+   
+    align-items: center;
+    justify-content: center;">
+  <div class="ab">
+    <div class="greetings">
+      <span>H</span><span>A</span><span>P</span><span>P</span><span>Y</span>
+    </div>
+    <div class="greetings">
+      <span>B</span><span>I</span><span>R</span><span>T</span><span>H</span><span>D</span><span>A</span><span>Y</span>
+    </div>
+    <div class="greetings">
+      <span>D</span><span>I</span><span>L</span><span>I</span><span>S</span><span>H</span><span>A</span>
+    </div>
+    <div class="description">
+      Some people shine without trying... you're one of them. ✨
+    </div>
+    <div class="shayari">
+      "Tere jaisa dost na koi milta, is duniya mein... 🌍<br>Tu dil ka armaan hai, ek pyara insaan hai... 💖"
+    </div>
+
+  <div style="position: relative; display: inline-block;     margin-right: 65%;
+    margin-left: 35%;">
+  <!-- Upar wala button (dikhai dene wala) -->
+  <button
+    id="startBtn"
+    onclick="goTo('a');"
+    style="position: absolute; top: 0; left: 0; z-index: 2;"
+  >
+    Start
+  </button>
+
+  <!-- Neeche chhupa hua button (extra backup, optional) -->
+  <button
+    onclick="goTo('a');"
+    style="position: absolute; top: 0; left: 0; z-index: 1;"
+  >
+    Start
+  </button>
+</div>
+
+ 
+  </div>
+</div>
+<div class="a" style="background: #111;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;">
+	  <div class="ss">
+ <div id="headerContainer"></div>
+  <div id="paragraphContainer"></div>
+  <div id="imageContainer">
+    
+  </div>
+  <div id="buttonsContainer">
+    <button onclick="goTo('z')">Back</button>
+  <button onclick="goTo('b')">Next</button>
+  </div>
+</div>
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const headerContainer = document.getElementById('headerContainer');
+    const paragraphContainer = document.getElementById('paragraphContainer');
+    const imageContainer = document.getElementById('imageContainer');
+    const buttonsContainer = document.getElementById('buttonsContainer');
+    const headerMessage = "From my Radhe heart";
+    const paragraphMessage = "I pray to Radhe Krishna that you soar freely, chase your dreams without fear, and live every moment with joy. Today is your day — filled with love, light, and laughter. Keep smiling, dance like no one’s watching, and stay the sunshine in everyone’s life. And remember, your Radhe-coded Jassu is always with you — with support, care, and unlimited fun. Radhe Radhe 💖 You're one of a kind 😇✨";
+
+    function typeText(text, element, speed, callback) {
+      element.style.visibility = 'visible';
+      let i = 0;
+      const span = document.createElement('span');
+      const cursor = document.createElement('span');
+      cursor.className = 'heart-cursor';
+      cursor.innerText = '❤️';
+      element.appendChild(span);
+      element.appendChild(cursor);
+
+      function typeChar() {
+        if (i < text.length) {
+          span.textContent += text[i++];
+          setTimeout(typeChar, speed);
+        } else if (callback) {
+          callback();
+        }
+      }
+      typeChar();
+    }
+
+    startBtn.addEventListener('click', () => {
+      startBtn.style.display = 'none';
+      typeText(headerMessage, headerContainer, 100, () => {
+        typeText(paragraphMessage, paragraphContainer, 80, () => {
+          imageContainer.classList.add('visible');
+          setTimeout(() => {
+            buttonsContainer.classList.add('visible');
+          }, 600);
+        });
+      });
+    });
+  </script>
+</div>
+
+<div class="b">
+<div id="colorful-heart-zone"></div>
+  <div id="wrapper">
+    <div class="flag__birthday">
+        <img src="./a.png" alt="" width="350" class="flag__left">
+        <img src="./a.png" alt="" width="350" class="flag__right">
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="title">
+                <h1 class="happy">
+                    <span style="--t: 4s;">H</span>
+                    <span style="--t: 4.2s;">a</span>
+                    <span style="--t: 4.4s;">p</span>
+                    <span style="--t: 4.6s;">p</span>
+                    <span style="--t: 4.8s;">y</span>
+                </h1>
+                <h1 class="birthday">
+                    <span style="--t: 5s;">B</span>
+                    <span style="--t: 5.2s;">i</span>
+                    <span style="--t: 5.4s;">r</span>
+                    <span style="--t: 5.6s;">t</span>
+                    <span style="--t: 5.8s;">h</span>
+                    <span style="--t: 6s;">d</span>
+                    <span style="--t: 6.2s;">a</span>
+                    <span style="--t: 6.4s;">y</span>
+                </h1>
+                <div class="hat">
+                    <img src="./hat.png" alt="" width="130">
+                </div>
+            </div>
+            <div class="date__of__birth">
+                <span></span>
+            </div>
+            <div class="btn">
+                <button class="no-animate" id="btn__letter">
+                    Click here cutiee
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="box__account">
+                <div class="image">
+                    <img src="./r5.png" alt="">
+                </div>
+                <div class="name">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Dilisha</span>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="balloon_one">
+                    <img width="100px" src="./balloon1.png" alt="">
+                </div>
+                <div class="balloon_two">
+                    <img width="100px" src="./balloon2.png" alt="">
+                </div>
+            </div>
+            <div class="cricle">
+                <div class="text__cricle">
+                    <span style="--i: 1;">h</span>
+                    <span style="--i: 2;">a</span>
+                    <span style="--i: 3;">p</span>
+                    <span style="--i: 4;">p</span>
+                    <span style="--i: 5;">y</span>
+                    <span style="--i: 6;">-</span>
+                    <span style="--i: 7;">b</span>
+                    <span style="--i: 8;">i</span>
+                    <span style="--i: 9;">r</span>
+                    <span style="--i: 10;">t</span>
+                    <span style="--i: 11;">h</span>
+                    <span style="--i: 12;">d</span>
+                    <span style="--i: 13;">a</span>
+                    <span style="--i: 14;">y</span>
+                    <span style="--i: 15;">-</span>
+                </div>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="decorate_star star1" style="--t: 15s;"></div>
+    <div class="decorate_star star2" style="--t: 15.2s;"></div>
+    <div class="decorate_star star3" style="--t: 15.4s;"></div>
+    <div class="decorate_star star4" style="--t: 15.6s;"></div>
+    <div class="decorate_star star5" style="--t: 15.8s;"></div>
+    <div class="decorate_flower--one" style="--t: 15s;">
+        <img width="20" src="./decorate_flower.png" alt="">
+    </div>
+    <div class="decorate_flower--two" style="--t: 15.3s;">
+        <img width="20" src="./decorate_flower.png" alt="">
+    </div>
+    <div class="decorate_flower--three" style="--t: 15.6s;">
+        <img width="20" src="./decorate_flower.png" alt="">
+    </div>
+    <div class="decorate_bottom">
+        <img src="./decorate.png" alt="" width="100">
+    </div>
+    <div class="smiley__icon">
+        <img src="./smiley_icon.png" alt="" width="100">
+    </div>
+
+    
+
+    <div class="box__letter">
+        <div class="letter__border">
+		 
+            <div class="letter">
+                <div class="title__letter">
+                </div>
+                <div class="content__letter">
+                    <div class="left">
+					
+                        <img id="heart__letter" src="https://media.giphy.com/media/YKUvclrGYmDKXwtphf/giphy.gif" alt=""> 
+						<button onclick="goTo('a')">Back</button>
+                        <button onclick="goTo('c')">Next</button>
+                        <img class="heart heart_1" style="--t: 0.2s" width="20" src="./heart.png" alt="">
+                        <img class="heart heart_2" style="--t: 0.4s" width="20" src="./heart.png" alt="">
+                        <img class="heart heart_3" style="--t: 0.6s" width="20" src="./heart.png" alt="">
+                        <img class="heart heart_4" style="--t: 0.8s" width="20" src="./heart.png" alt="">
+                    </div>
+                    <div class="right">
+<button class="close-btn" data-no-animate id="close__letter">×</button>
+                        <div class="text__letter">
+						
+                             <p></p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div id="copy">
+     
+  </div>
+ 
+</div>
+<script>
+    let datetxt = "22 May 2007";
+    let datatxtletter = "My bestie, You're truly special. Even if I’m not there today, my smile and prayers are with you. Thank you for being a part of my life — it means more than words. Wishing you joy, peace, and all the love you deserve. Happy Birthday, lovely. Miss me a little today. 💌💕😌"
+ ;
+    let titleLetter = "To you";
+    let charArrDate = datetxt.split('');
+    let charArrDateLetter = datatxtletter.split('');
+    let charArrTitle = titleLetter.split('');
+    let currentIndex = 0;
+    let currentIndexLetter = 0;
+    let currentIndexTitle = 0;
+    let date__of__birth = document.querySelector(".date__of__birth span");
+    let text__letter = document.querySelector(".text__letter p");
+    setTimeout(function(){
+        timeDatetxt = setInterval(function(){
+            if(currentIndex < charArrDate.length){
+                date__of__birth.textContent += charArrDate[currentIndex];
+                currentIndex++;
+            }
+            else{
+                let i = document.createElement("i");
+                i.className = "fa-solid fa-star"
+                document.querySelector(".date__of__birth").prepend(i)
+                document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
+                clearInterval(timeDatetxt)
+            }
+        },100)
+    },12000)
+
+    var intervalContent;
+    var intervalTitle;
+    $("#btn__letter").on("click", function(){
+        $(".box__letter").slideDown()
+        setTimeout(function(){
+            $(".letter__border").slideDown();
+        },1000)
+        setTimeout(function(){
+            intervalTitle = setInterval(function(){
+                if(currentIndexTitle < charArrTitle.length){
+                    document.querySelector(".title__letter").textContent += charArrTitle[currentIndexTitle];
+                    let i = document.createElement("i");
+                    i.className = "fa-solid fa-heart"
+                    document.querySelector(".title__letter").appendChild(i)
+                    currentIndexTitle++;
+                }
+                else{
+                    clearInterval(intervalTitle)
+                }
+            },100)
+        },2000)
+		document.getElementById('close__letter')
+  .addEventListener('click', () => {
+    document.querySelector('.box__letter').style.display = 'none';
+});
+        setTimeout(function(){
+            document.querySelector("#heart__letter").classList.add("animationOp");
+            document.querySelector(".love__img").classList.add("animationOp");
+            document.querySelector("#mewmew").classList.add("animationOp");
+        },2800)
+        setTimeout(function(){
+            document.querySelectorAll(".heart").forEach((item)=>{
+                item.classList.add("animation")
+            })
+        },3500)
+        setTimeout(function(){
+            intervalContent = setInterval(function(){
+                if(currentIndexLetter < charArrDateLetter.length){
+                    text__letter.textContent += charArrDateLetter[currentIndexLetter];
+                    currentIndexLetter++;
+                }
+                else{
+                    clearInterval(intervalContent)
+                }
+            },60)
+        },6000)
+    })
+    $(".close").on("click", function(){
+        clearInterval(intervalContent)
+        document.querySelector(".title__letter").textContent = "";
+        text__letter.textContent = "";
+        currentIndexLetter = 0
+        currentIndexTitle = 0
+        document.querySelector("#heart__letter").classList.remove("animationOp");
+        document.querySelector(".love__img").classList.remove("animationOp");
+        document.querySelector("#mewmew").classList.remove("animationOp");
+        document.querySelectorAll(".heart").forEach((item)=>{
+                item.classList.remove("animation")
+            })
+        $(".box__letter").slideUp();
+        $(".letter__border").slideUp();
+    })
+</script>
+<script>
+function getRandomColor() {
+  const colors = ["red", "pink", "blue", "green", "purple", "orange", "yellow", "aqua", "lime", "fuchsia", "gray", "black", "white", "silver","maroon", "olive", "navy", "teal", "brown", "gold", "indigo", "violet", "beige", "coral"];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function dropColorfulHeart() {
+  const heart = document.createElement("div");
+  const heartColor = getRandomColor(); // Get random color
+  
+  heart.innerHTML = `
+    <svg class='colorful-line spinning' style='opacity:.5;z-index:100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+      <g transform='translate(2.550170, 3.550158)'>
+        <path d='M0.371729633,8.89614246 C-0.701270367,5.54614246 0.553729633,1.38114246 4.07072963,0.249142462 C5.92072963,-0.347857538 8.20372963,0.150142462 9.50072963,1.93914246 C10.7237296,0.0841424625 13.0727296,-0.343857538 14.9207296,0.249142462 C18.4367296,1.38114246 19.6987296,5.54614246 18.6267296,8.89614246 C16.9567296,14.2061425 11.1297296,16.9721425 9.50072963,16.9721425 C7.87272963,16.9721425 2.09772963,14.2681425 0.371729633,8.89614246 Z'></path>
+        <path d='M13.23843,4.013842 C14.44543,4.137842 15.20043,5.094842 15.15543,6.435842'></path>
+      </g>
+    </svg>`;
+  
+  heart.className = "colorful-heart";
+  heart.style.left = (Math.random() * 95) + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  heart.querySelector("svg").style.stroke = heartColor; // Apply random color
+  
+  const colorfulZone = document.querySelector("#colorful-heart-zone");
+  if (colorfulZone) colorfulZone.appendChild(heart);
+}
+
+setInterval(() => {
+  dropColorfulHeart();
+  const allHearts = document.querySelectorAll("#colorful-heart-zone .colorful-heart");
+  if (allHearts.length > 100) {
+    allHearts[0].remove();
+  }
+}, 500);
+</script>
+ 
+<div class="c" style="background: linear-gradient(to bottom, #ffe1e1, #ff217de0), url(./r.jpg); 
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;">
+
+  <div id="bodyblur">
+    <!-- Wallpaper -->
+    <img src="" id="wallpaper" />
+  </div>
+
+  <div id="Content">
+    <div id="kadoIn">
+      <!-- Gift Button -->
+      <img src="./GiftBox.png" alt="Open Gift Button" />
+    </div>
+    <p id="ket">
+      <span style="font-style: italic; color: rgb(0,0,0); margin-top: 3px !important;">Open the gift, cutieeee</span>
+    </p>
+
+    <div class="kumpulanstiker" style="margin-top: 95px;">
+      <!-- Stickers for Content -->
+      <img src="https://media.tenor.com/4Ijycn6xFzUAAAAj/mochi-blue-roses.gif" id="fotostiker" />
+      <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker1" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2" />
+      <img src="https://media.tenor.com/snFoLI-S9CQAAAAj/milk-and-mocha.gif" id="fotostiker3" />
+      <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker4" />
+      <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker5" />
+    </div>
+
+    <p id="halo" class="halo"></p>
+
+    <div>
+      <blockquote id="bq" data-text="💞">
+        <p id="kalimat">
+          Happy Birthday, gorgeous! Today is all about celebrating you.
+        </p>
+        <p id="pesan1">Tap here for your birthday surprise! 🎉</p>
+        <div id="kolombaru">
+          <li id="lv1">🎂</li>
+          <li id="lv2">🎁</li>
+          <li id="lv3">🥳</li>
+          <li id="lv4">💖</li>
+        </div>
+        <p id="pesan2">You shine brighter every year! ✨</p>
+        <p id="pesan3">Do you know what makes today extra special?</p>
+        <p id="pesan4" class="sty2">It’s your birthday!</p>
+        <p id="pesan5" class="sty2">
+          Today, I wish you a year filled with laughter, love, and unforgettable moments.
+        </p>
+        <p id="pesan6" class="sty2">
+          Remember, you deserve all the happiness in the world. Celebrate big and enjoy every moment!
+        </p>
+        <p id="opsL">Tap to continue the celebration!</p>
+      </blockquote>
+    </div>
+
+    <!-- Send Message Button -->
+    <div id="Tombol">
+      <a id="By"></a>
+      <button onclick="goTo('b')">Back</button>
+      <button onclick="goTo('d')">Next</button>
+    </div>
+
+    <!-- Rejected Message (if needed) -->
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif" />
+      <p id="kataditolak">
+        Oops! You can’t skip this birthday magic.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: "#FF0040",
+      imageHeight: 80,
+    });
+
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        fungsiAwal = 1;
+        kadoIn.style = "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 500);
+      }
+    };
+
+    async function inipesan() {
+      window.nama = "My Dear Bestfriend";
+      if (window.nama.length < 20) {
+        vketikhalo = "Happy Birthday, " + window.nama + "!";
+        mulainama();
+      } else {
+        await Swal.fire({
+          title: "Your name is lovely, but it seems a bit long.",
+          text: "Please enter a shorter name.",
+          icon: "warning",
+        });
+        inipesan();
+      }
+    }
+
+    var tanya = "How about we celebrate your birthday in style?";
+    var opstanya = "Your choice is:";
+    var tompositif = "Absolutely, let’s celebrate! 🎉";
+    var tomnegatif = "Maybe another time";
+
+    async function pertanyaan() {
+      var { isConfirmed: prtanya } = await swals.fire({
+        title: nama + ", " + tanya,
+        text: "" + opstanya,
+        imageUrl: "" + fotostiker5.src,
+        showCancelButton: true,
+        confirmButtonText: "" + tompositif,
+        cancelButtonText: "" + tomnegatif,
+      });
+      if (prtanya) {
+        pesanwhatsapp = "Yes " + nama + ", let the birthday magic begin!";
+        menuju();
+      } else {
+        pesanwhatsapp = nama + ", don't miss out on the birthday fun!";
+        await swalst.fire({
+          title: "" + kataditolak.innerHTML,
+          timer: 2000,
+          imageUrl: "" + stikerditolak.src,
+        });
+        menuju();
+      }
+    }
+  </script>
+
+
+  <script src="ab.js"></script>
+
+</div>
+
+<div class="d" style=" background: #121212;
+  color: #eee;
+  
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  font-family: fangsong;
+  background: url('time.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+    ">
+  <!-- Heading shows years -->
+  <h1 class="hh" ">Congratulations! You are <span id="yrsText">--</span> years old</h1>
+
+  <!-- Stats breakdown -->
+  <div class="stats">
+    <div class="boxed"><h2>Years</h2><p id="yrs">--</p></div>
+    <div class="boxed"><h2>Months</h2><p id="mos">--</p></div>
+    <div class="boxed"><h2>Days</h2><p id="dys">--</p></div>
+    <div class="boxed"><h2>Weeks</h2><p id="wks">--</p></div>
+  </div>
+
+  <!-- Live time, now including Years -->
+  <h2  class="hh">Total Live Time</h2>
+  <div class="live">
+    <div class="boxed"><h2>Hours</h2><p id="hhrs">--</p></div>
+    <div class="boxed"><h2>Minutes</h2><p id="mmin">--</p></div>
+    <div class="boxed"><h2>Seconds</h2><p id="ssec">--</p></div>
+  </div>
+<div class="nv">
+  <p style="margin-bottom: 15px;">
+   
+    Aap <span id="yrsMsg">--</span> saal ki ho gayi ho, par dil ab bhi utna hi cute hai! 🌸
+  </p>
+  <i  style="color: #00ffdd;font-weight: 500;">
+  Janamdin tera aaye, zindagi muskuraye,<br>
+  Teri har ek ada pe chand bhi sharmaaye... 🌙<br>
+  Dua hai meri, har pal tu haste rehna,<br>
+  Teri khushi mein hi toh mera dil chain paaye.🎉💕
+</i>
+</div>
+
+  <script>
+    // Fixed birth date: 22 May 2007 local midnight
+    const birth = new Date(2007, 4, 22, 0, 0, 0);
+
+    function updateStats() {
+      const now = new Date();
+
+      // total months difference
+      let totalMonths = (now.getFullYear() - birth.getFullYear()) * 12
+                      + (now.getMonth() - birth.getMonth());
+      if (now.getDate() < birth.getDate()) totalMonths--;
+
+      const years  = Math.floor(totalMonths / 12);
+      const months = totalMonths % 12;
+
+      // days difference after adding years & months
+      const temp = new Date(birth);
+      temp.setFullYear(birth.getFullYear() + years);
+      temp.setMonth(birth.getMonth() + months);
+      const days = Math.floor((now - temp) / (1000*60*60*24));
+
+      const weeks = Math.floor((now - birth) / (1000*60*60*24*7));
+
+      // Update heading & stats
+      document.getElementById('yrsText').textContent = years;
+      document.getElementById('yrs').textContent     = years;
+      document.getElementById('mos').textContent     = months;
+      document.getElementById('dys').textContent     = days;
+      document.getElementById('wks').textContent     = weeks;
+	  document.getElementById('yrsMsg').textContent = years;
+
+      // Also update liveYears boxdocument.getElementById('liveYrs').textContent = years;
+    }
+
+    function updateLive() {
+      const diff = Date.now() - birth.getTime();
+      const sec  = Math.floor(diff / 1000);
+      const min  = Math.floor(sec / 60);
+      const hr   = Math.floor(min / 60);
+
+      document.getElementById('hhrs').textContent = hr;
+      document.getElementById('mmin').textContent = min % 60;
+      document.getElementById('ssec').textContent = sec % 60;
+    }
+
+    // Initial render
+    updateStats();
+    updateLive();
+    // Refresh every second
+    setInterval(() => {
+      updateStats();
+      updateLive();
+    }, 1000);
+  </script>
+<div style="text-align: center;">
+  <button onclick="goTo('c')">Back</button>
+  <button onclick="goTo('e')">Next</button>
+</div>
+</div>
+<div class="e" style=" margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    position: relative;
+    justify-items: anchor-center;
+    overflow-x: hidden;
+    text-align: center;
+    align-content: center;">
+    <div class="laugh-emoji" id="laughEmoji">😂</div>
+<div class="laugh-emoji" id="heartEmoji">💖</div>
+  <div class="containerrr">
+    <h1 style="  font-size: 26px;
+      margin-bottom: 15px;
+      color: #4a4a4a;">💖 Memory Test 💖 </h1>
+    <div class="intro" id="introText">
+      Chalo Yarr, ek memory test khelte hain...<br>
+      Dekhte hai yaadein kitni perfect rakhti hai 😘
+    </div>
+    <div class="rules">
+      📝 <b>Rules:</b><br>
+      - Click on 2 cards to flip.<br>
+      - Match the same emoji pair ❤️=❤️<br>
+      - Match all to unlock buttons 😍
+    </div>
+    <button class="start-btntt" onclick="startGame()">Shuru Karein? 😏</button>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="tt" id="endButtons">
+	<div id="romantic-heart-zone"></div>
+      <button onclick="goTo('d')">Back</button>
+  <button onclick="goTo('f')">Next</button>
+    </div>
+  </div>
+
+  <script>
+   const emojis = ["🫶", "❤️", "🥳", "💞", "💐", "😍", "🥰", "🩷"];
+let cards = [...emojis, ...emojis];
+const board = document.getElementById('gameBoard');
+const intro = document.getElementById('introText');
+const endButtons = document.getElementById('endButtons');
+const laughEmoji = document.getElementById('laughEmoji');
+const heartEmoji = document.getElementById('heartEmoji'); // NAYA emoji element
+
+let hasFlipped = false, lockBoard = false;
+let firstCard, secondCard, matchedPairs = 0;
+
+function startGame() {
+  document.querySelector('.start-btntt').style.display = 'none';
+  intro.style.display = 'none';
+  board.style.display = 'grid';
+  shuffle(cards);
+  board.innerHTML = '';
+  cards.forEach(value => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.emoji = value;
+    card.addEventListener('click', flipCard);
+    board.appendChild(card);
+  });
+}
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function flipCard() {
+  if (lockBoard || this === firstCard) return;
+  this.classList.add('flipped');
+  this.textContent = this.dataset.emoji;
+
+  if (!hasFlipped) {
+    hasFlipped = true;
+    firstCard = this;
+    return;
+  }
+
+  secondCard = this;
+  checkMatch();
+}
+
+function checkMatch() {
+  const isMatch = firstCard.dataset.emoji === secondCard.dataset.emoji;
+  if (isMatch) {
+    disableCards();
+  } else {
+    showLaugh();
+    unflipCards();
+  }
+}
+
+function showLaugh() {
+  laughEmoji.classList.add('active');
+  setTimeout(() => {
+    laughEmoji.classList.remove('active');
+  }, 1000);
+}
+
+function showHeart() {
+  heartEmoji.classList.add('active');
+  setTimeout(() => {
+    heartEmoji.classList.remove('active');
+  }, 1000);
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+  matchedPairs++;
+  showHeart(); // ❤️ RIGHT MATCH EMOJI
+  resetBoard();
+  if (matchedPairs === emojis.length) {
+    setTimeout(() => {
+      board.insertAdjacentHTML("afterend", "<div style='margin-top:15px; font-weight:bold;'>Wahh Wahh! Memory bhi dosti jaisi deep hai 💕</div>");
+      endButtons.style.display = 'flex';
+    }, 600);
+  }
+}
+
+function unflipCards() {
+  lockBoard = true;
+  setTimeout(() => {
+    firstCard.classList.remove('flipped');
+    secondCard.classList.remove('flipped');
+    firstCard.textContent = '';
+    secondCard.textContent = '';
+    resetBoard();
+  }, 1000);
+}
+
+function resetBoard() {
+  [hasFlipped, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+function goTo(page) {
+  alert(`Navigating to ${page}.html`);
+  // window.location.href = page + '.html';
+}
+
+  </script>
+  <script>
+function dropRomanticHeart() {
+  const redHeart = document.createElement("div");
+  redHeart.innerHTML = `
+    <svg class='red-line twister' style='opacity:.5;z-index:100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+      <g transform='translate(2.550170, 3.550158)'>
+        <path d='M0.371729633,8.89614246 C-0.701270367,5.54614246 0.553729633,1.38114246 4.07072963,0.249142462 C5.92072963,-0.347857538 8.20372963,0.150142462 9.50072963,1.93914246 C10.7237296,0.0841424625 13.0727296,-0.343857538 14.9207296,0.249142462 C18.4367296,1.38114246 19.6987296,5.54614246 18.6267296,8.89614246 C16.9567296,14.2061425 11.1297296,16.9721425 9.50072963,16.9721425 C7.87272963,16.9721425 2.09772963,14.2681425 0.371729633,8.89614246 Z'></path>
+        <path d='M13.23843,4.013842 C14.44543,4.137842 15.20043,5.094842 15.15543,6.435842'></path>
+      </g>
+    </svg>`;
+  redHeart.className = "romantic-heart";
+  redHeart.style.left = (Math.random() * 95) + "vw";
+  redHeart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+  const romanticZone = document.querySelector("#romantic-heart-zone");
+  if (romanticZone) romanticZone.appendChild(redHeart);
+}
+
+setInterval(() => {
+  dropRomanticHeart();
+  const allHearts = document.querySelectorAll("#romantic-heart-zone .romantic-heart");
+  if (allHearts.length > 100) {
+    allHearts[0].remove();
+  }
+}, 300);
+</script>
+</div>
+
+
+<div class="f" style=" background-image: linear-gradient(rgb(206 187 187 / 0%), rgb(255 0 129 / 35%)), url(bgrt1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;">
+  <div class="wr">
+        <div class="it"></div>
+        <div class="content">
+            <div class="te"><i class="fa-solid fa-heart"></i>To You!<i class="fa-solid fa-heart"></i></div>
+              <p class="tec" id="type-target"></p>
+            
+        </div>
+		 <button class="fg" onclick="goTo('e')" style="display:none;">Back</button>
+  <button class="fh" onclick="goTo('g')" style="display:none;">Next</button>
+    </div>
+
+  
+<script>
+function typeWriter() {
+    const text = `
+🎉 Suno... Janamdin Mubarak ho! 🎉
+💖 Suno... Janamdin Mubarak ho! 💖<br>
+🌟 Koi tum jaisa na ho,
+🌸 Bahot khubsurat ho tum, bahot khubsurat tum raho...<br>
+🚀 Har kamyabi par pahucho,
+🎯 Har manzil par pahucho...
+🌈 Jahan logo ko saalon lag jaaye pahuchne mein,
+🕊️ Tum jaldi wahan pahucho...<br>
+🤔 Main achha hoon ya bura hoon, nahi jaanta...
+❤️ Dil ki ek baat batani hai...
+💌 Dil tumhare alawa kisi ko khaas nahi maanta apna...<br>
+👫 Tum saath raho, tum khaas raho...
+🥳 Ek saal aur badh gayi hai umar tumhari,
+💑 Har badhti umar mein tum mere saath raho...<br>
+🎁 Koi khaas tohfa nahi hai jo main tumhe de paunga...
+🤝 Par wada hai, har mushkil mein yeh saath nibhaunga...<br>
+🌹 Ek aur saal tumhare kadmo mein mubarak ho...
+💫 Achha suno... Janamdin Mubarak ho! 💫
+`;
+
+    const element = document.getElementById('type-target');
+    element.innerHTML = ''; // clear if anything inside
+
+    let i = 0;
+    const span = document.createElement('span');
+    const cursor = document.createElement('span');
+    cursor.className = 'heart-cursor';
+    cursor.innerText = '❤️';
+    element.appendChild(span);
+    element.appendChild(cursor);
+
+    function _type() {
+        if (i < text.length) {
+            if (text[i] === '<') {
+                // handle full tag
+                const end = text.indexOf('>', i);
+                const tag = text.slice(i, end + 1);
+                span.innerHTML += tag;
+                i = end + 1;
+            } else {
+                // Handle regular text and spaces
+                span.innerHTML += text[i++];
+            }
+            setTimeout(_type, 80);
+        } else {
+            // typing complete
+            cursor.style.display = 'none';
+            document.querySelector('.fg').style.display = 'inline-block';
+            document.querySelector('.fh').style.display = 'inline-block';
+        }
+    }
+
+    _type();
+}
+
+// Start when .f is visible
+const fSection = document.querySelector('.f');
+let started = false;
+const mo = new MutationObserver((_, obs) => {
+    if (!started && getComputedStyle(fSection).display !== 'none') {
+        started = true;
+        typeWriter();
+        obs.disconnect();
+    }
+});
+mo.observe(fSection, { attributes: true, attributeFilter: ['style', 'class'] });
+</script>
+
+
+ 
+</div>
+
+<div class="g" style="background: #000;
+      overflow: hidden;
+      position: relative;
+      min-height: 100vh;">
+   <div class="jassu-container">
+    <div class="jassu-today-count">💖 Today Day - <span id="jassuDayOnly">___</span> 💖</div>
+    
+    <h2 class="jassu-main-text">
+      Wese ek baat yaad hai kya dost...? <br><br>
+      Aaj ham <span class="jassu-highlight" id="jassuTotalDays">___</span> din,<br>
+      <span class="jassu-highlight" id="jassuHours">__</span> hour 
+      <span class="jassu-highlight" id="jassuMinutes">__</span> min 
+      <span class="jassu-highlight" id="jassuSeconds">__</span> second<br>
+      se close friend rahe...<br><br>
+      Aur shaayad aage bhi... ek dusre ke liye waise hi khaas rahein 💫
+    </h2>
+
+    <div class="jassu-romantic">
+      Tumhare bina kuch adhura sa lagta hai... <br>
+      Har ek pal tumhare saath jeene ka mann karta hai... <br>
+      Shayad yahi toh hota hai... asli connection ❤️
+    </div>
+
+    <div class="jassu-radhe"> <span class="jassu-heart">❤</span>Radhe-Radhe<span class="jassu-heart">❤</span></div>
+  <div class="jassu-heart-container"></div>
+    <br><br>
+    <button onclick="goTo('f')">Back</button>
+    <button onclick="goTo('h')">Next</button>
+  </div>
+
+  <script>
+    const startDate = new Date("2024-12-31T00:00:00");
+
+    function updateTime() {
+      const now = new Date();
+      const diff = now - startDate;
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / (60 * 60 * 24));
+      const hours = Math.floor((totalSeconds / (60 * 60)) % 24);
+      const minutes = Math.floor((totalSeconds / 60) % 60);
+      const seconds = totalSeconds % 60;
+
+      document.getElementById("jassuDayOnly").textContent = days;
+      document.getElementById("jassuTotalDays").textContent = days;
+      document.getElementById("jassuHours").textContent = hours;
+      document.getElementById("jassuMinutes").textContent = minutes;
+      document.getElementById("jassuSeconds").textContent = seconds;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // floating hearts animation
+  setInterval(() => {
+  const heartContainer = document.querySelector('.jassu-heart-container');
+  const heart = document.createElement('div');
+  heart.classList.add('jassu-heart-float');
+  heart.textContent = '💖';
+  heart.style.left = Math.random() * 100 + 'vw'; // <-- Corrected line
+  heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+  heartContainer.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}, 400);
+
+    function goTo(anchor) {
+      alert("Going to section: " + anchor); // Replace with actual logic
+    }
+  </script>
+</div>
+
+<div class="h" style=" position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  background: #000000;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 9999;">
+   
+  
+   <video id="fullscreenVideo" src="dilisha1.mp4" playsinline></video>
+  <button id="playVideoBtn" class="playVideoBtn">Play Video</button>
+<script>
+  // Grab your elements
+  const video   = document.getElementById("fullscreenVideo");
+  const hDiv    = document.querySelector(".h");
+  const bgAudio = document.getElementById("audioPlayer");
+  const playBtn = document.getElementById("playVideoBtn");
+
+  // Show & play the video, pause BG audio
+  function showVideoSection() {
+    hDiv.style.display = "block";
+    bgAudio.pause();
+
+    video.currentTime = 0;
+    video.muted = false;
+
+    video.play()
+      .then(()=> console.log("▶️ Video playing"))
+      .catch(_=>{
+        console.warn("Autoplay blocked – showing play button");
+        playBtn.style.display = "block";
+      });
+
+    // When the video ends: hide it, flip to “i” and restart BG audio
+    video.onended = () => {
+      hDiv.style.display = "none";
+      goTo("i");
+      bgAudio.muted = false;
+      bgAudio.play().catch(err => 
+        console.warn("BG Music resume failed:", err)
+      );
+    };
+  }
+
+  // Fallback “Play” button if autoplay is blocked
+  playBtn.addEventListener("click", () => {
+    video.play()
+      .then(()=> playBtn.style.display = "none")
+      .catch(err=> alert("Playback failed: " + err));
+  });
+
+  // Watch for your .h panel becoming “.active” – then fire the video
+  new MutationObserver(muts => {
+    muts.forEach(m => {
+      if (m.attributeName === "class" && hDiv.classList.contains("active")) {
+        showVideoSection();
+      }
+    });
+  }).observe(hDiv, { attributes: true });
+
+  // Keep the video container hidden until it’s truly needed
+  hDiv.style.display = "none";
+</script>
+
+
+</div>
+
+
+
+<div class="i">
+
+  
+ <div class="ghand">
+  <button style="z-index:1;" onclick="goTo('g')">Back</button>
+  <!-- Background -->
+  <div class="nig"></div>
+
+  <!-- Flower -->
+  <div class="flowers">
+    <div class="flower flower--1">
+      <div class="flower__leafs flower__leafs--1">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+        <div class="flower__line__leaf flower__line__leaf--5"></div>
+        <div class="flower__line__leaf flower__line__leaf--6"></div>
+      </div>
+    </div>
+
+    <div class="flower flower--2">
+      <div class="flower__leafs flower__leafs--2">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <div class="flower flower--3">
+      <div class="flower__leafs flower__leafs--3">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+
+      </div>
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <div class="grow-ans" style="--d:1.2s">
+      <div class="flower__g-long">
+        <div class="flower__g-long__top"></div>
+        <div class="flower__g-long__bottom"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--1">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--2">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="grow-ans" style="--d:2.4s">
+      <div class="flower__g-right flower__g-right--1">
+        <div class="leaf"></div>
+      </div>
+    </div>
+
+    <div class="grow-ans" style="--d:2.8s">
+      <div class="flower__g-right flower__g-right--2">
+        <div class="leaf"></div>
+      </div>
+    </div>
+
+    <div class="grow-ans" style="--d:2.8s">
+      <div class="flower__g-front">
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--1">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--2">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--3">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--4">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--5">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--6">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--7">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__leaf-wrapper flower__g-front__leaf-wrapper--8">
+          <div class="flower__g-front__leaf"></div>
+        </div>
+        <div class="flower__g-front__line"></div>
+      </div>
+    </div>
+
+    <div class="grow-ans" style="--d:3.2s">
+      <div class="flower__g-fr">
+        <div class="leaf"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--1"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--2"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--3"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--4"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--5"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--6"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--7"></div>
+        <div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--0">
+      <div class="grow-ans" style="--d:3s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:2.2s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.4s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.6s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--1">
+      <div class="grow-ans" style="--d:3.6s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.8s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:4s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.2s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--2">
+      <div class="grow-ans" style="--d:4s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.2s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.4s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.6s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--3">
+      <div class="grow-ans" style="--d:4s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.2s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:3s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.6s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--4">
+      <div class="grow-ans" style="--d:4s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.2s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:3s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.6s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--5">
+      <div class="grow-ans" style="--d:4s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.2s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:3s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.6s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--6">
+      <div class="grow-ans" style="--d:4.2s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.4s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.6s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:4.8s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+
+    <div class="long-g long-g--7">
+      <div class="grow-ans" style="--d:3s">
+        <div class="leaf leaf--0"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.2s">
+        <div class="leaf leaf--1"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.5s">
+        <div class="leaf leaf--2"></div>
+      </div>
+      <div class="grow-ans" style="--d:3.6s">
+        <div class="leaf leaf--3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <h1 class="tle"><span id="tle"></span></h1>
+  <button style="z-index:1;" onclick="goTo('k')">Next</button>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/mouse_slide.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicklove.js"></script>
+
+
+
+<!-- Import Javascript -->
+<script src="./flowers.js"></script>
+
+    
+</div>
+<div class="k" style=" width: 100vw; height: 100vh; background: linear-gradient(rgb(255 255 255 / 56%), rgb(255 4 131 / 53%)), url(./background.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; ">
+  <h2 class="birth-heading">Happy<br>Birthday<br>yarr</h2>
+    <div class="conainer" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
+
+        <div class="body_left">
+            <img src="./jaswant.gif" alt="" ondragstart='return false;'>
+        </div>
+
+        <div class="body_center lovee">
+            <div class="blockk">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footerr">
+        <div class="borderr">
+            <div class="border-top"></div>
+            <div class="border-bottom"></div>
+        </div>
+    </div>
+
+    <div class="tit">
+		 <button style="z-index:999;" onclick="goTo('i')">Back</button>
+    <button style="z-index:999;" onclick="goTo('l')">Next</button>
+	</div>
+
+   
+			
+
+
+    <script type="text/javascript" src="jaswant.js"></script>
+ 
+</div>
+
+
+<div class="l" style="min-height: 100vh;
+  background: url('shyari.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+   background-color: #201f1f;
+      color: #fff;
+      margin: 0;
+      padding: 20px;">
+	   <!-- First Screen: Message + Button -->
+  <div class="intro-screen" >
+    <h1>Are you ready for some beautiful Shayari? ❤️</h1>
+    <h4>dekh le thoda sa funny and lovely aur with flirting bhi hai <br> 😁😁😁</h4>
+
+  <!-- Shayari Section (Hidden by default) -->
+  <div class="shayari-section" >
+
+  <h2 class="gv">🎂 Shayari 1:</h2>
+  <jjjj>
+    Tere jaisa dost mila, yeh toh meri kismat ka rang hai,<br>
+Har pal tu saath ho, toh duniya ek geet ka sang hai.<br>
+Janamdin tera aaya hai, isse khoobsurat din kya hoga,<br>
+Tere bina toh yeh life bhi thoda adhoora sa hoga.<br>
+Muskurati reh tu hamesha, tere chehre ki wo roshni,<br>
+Dil se nikalti hai dua, tu rahe sada khush-naseebi!
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 2:</h2>
+  <jjjj>
+   Har ek pal tujhe yaad karke dil mein khushi chhayi rehti hai,<br>
+Tere jokes, teri harkatein... bas ek khumari si chhayi rehti hai.<br>
+Birthday hai tera, toh duaon ka silsila laya hoon,<br>
+Tere sapne poore ho, yeh khuda se chhupa sa rishta laya hoon.<br>
+Tu meri beastie hai, is baat pe toh fakr hai mujhe,<br>
+Duniya kuch bhi kahe, tu sabse pyaari lagti hai mujhe.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 3:</h2>
+  <jjjj>
+    Aaj phir ek saal badh gaya, par tu waise hi cute hai,<br>
+Har baat mein masti, har smile mein ek truth hai.<br>
+Teri dosti ka asar hai, jo dil itna halka lagta hai,<br>
+Tu saath ho toh andhera bhi roshni se bhara lagta hai.<br>
+Birthday hai aaj tumhara, tere liye khushiya bhi laaya hoon,<br>
+Tumhara sath rahe hamesha, iske-liye khuda se dua maang laaya hoon
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 4:</h2>
+  <jjjj>
+   Tera birthday matlab ek nayi kahani likhne ka din,<br>
+Har saal tu aur chamke, jise dekhe har ek nagin 😂<br>
+Dilisha naam mein hi ek royal feel hai,<br>
+Har pal tu hasti rahe, bas yahi deal hai.<br>
+Cake katega, dosti chalegi, yaariyon ka celebration hoga,<br>
+Dil se likhi ye shayari, teri life mein dedication hoga.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 5:</h2>
+  <jjjj>
+    Ek dost jise chhedne mein maza aata hai,<br>
+Har time overacting karne ka jazba aata hai 😜<br>
+Par wohi dost jab khush ho toh dil khilta hai,<br>
+Uske birthday pe toh asmaan bhi jhoomta hai.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 6:</h2>
+  <jjjj>
+   Teri hansi mein khushbu hai phoolon ki,<br>
+Teri baatein lagti hain dhoop dhoop si coolon ki.<br>
+Birthday pe ye dua hai dil se nikaali,<br>
+Har mushkil tu muskura ke sambhaale.<br>
+Tu rahe shining, tu rahe classy,<br>
+Duniya bole — "This girl’s sassy!"
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 7:</h2>
+  <jjjj>
+    Dosti woh rishta hai jo waqt se nahi toota,<br>
+Tu mili toh lagta hai zindagi se kuchh nahi chhuta.<br>
+Janamdin ke din tere liye dil se dua nikli,<br>
+Tere bina toh life lagti hai adhoori, bilkul pakki.<br>
+Tu meri beastie hai, na kabhi alag honge,<br>
+Tere birthday pe promise hai — forever saath rahenge!
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 8:</h2>
+  <jjjj>
+   Na moon mein chamak hai, na taare kuchh khaas hai,<br>
+Tere birthday ke saamne toh sab bekaar sa raaz hai.<br>
+Cake bhi jealous hai, tujhe dekhke melt ho gaya,<br>
+Candle bhi sharmai, tere glow se light ho gaya.<br>
+Yeh birthday tera, ye sab-kuchh possibility hai,<br>
+Bestie hai tu meri, yeh duniya ki sabse badi reality hai.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 9:</h2>
+  <jjjj>
+    Kya likhun tere birthday pe, lafz bhi confuse hai,<br>
+Tu lagti hai cute, par attitude mein full fuse hai.<br>
+Dosti mein no rules, no limit — sab allowed hai,<br>
+Par tu agar offline ho jaaye, toh mood cloud hai.<br>
+Janamdin pe tu full enjoy kar,<br>
+Tere bina toh life boring si day-night hai.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 10:</h2>
+  <jjjj>
+   Tere birthday pe itna likh diya toh kya hua,<br>
+Shayariyon ka stock dil se nikla.<br>
+Har saal tu aur nikhar jaaye,<br>
+Har dukh se tu door chali jaaye.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 11:</h2>
+  <jjjj>
+    Yeh din hai kuchh khaas, kyunki tu aayi is din thi,<br>
+Tere bina boring hota har ek din ka armaan.<br>
+Tu woh light hai jo andhere mein chamakti hai,<br>
+Tu woh hasi hai jo sab kuchh bigadne ke baad bhi sajti hai.<br>
+Tera birthday hai, toh cake kam tujhe cheer zyada milni chahiye,<br>
+Har dil mein tu rahe, tu toh permanent dil hi banana chahiye!
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 12:</h2>
+  <jjjj>
+   Tere birthday pe likhun kuchh dil se khaas,<br>
+Tu hai woh rishta jiska na koi moolya, na koi aas-paas.<br>
+Tere hone se hai har ek yaari mein rang,<br>
+Tu na ho toh lagta hai zindagi mein kuchh reh gaya tang.<br>
+Happy Birthday, meri zindagi ka smile mode,<br>
+Tu rahe hamesha happy — yehi hai dil ka code!
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 13:</h2>
+  <jjjj>
+    Tu hai meri dosti ka star plus wala show,<br>
+Tere bina life ka scene bilkul low.<br>
+Teri har ek baat hai sweet like chocolate cake,<br>
+Birthday pe na aaye tujhe fake logon ke fake shake.<br>
+Enjoy kar din ko full on chill mein,<br>
+Tu hai meri bestie no.1 — apne full will mein! 😎
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 14:</h2>
+  <jjjj>
+   Aaj tere liye sky bhi pink ho gaya,<br>
+Chaand bhi sochta hoga — main kyun itna dim ho gaya.<br>
+Birthday wali tu queen lagti hai style mein,<br>
+Tu smile kare toh sab kuch ho jaye file mein.<br>
+Dil karta hai tujhe ek gift doon duniya ka best,<br>
+Par tujhe mil gaya main — that’s already a fest! 😜
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 15:</h2>
+  <jjjj>
+    Janamdin pe likhun kuchh jazbaat se bhara,<br>
+Tere jaise dost mil jaaye toh milta hai sab kuchh sara.<br>
+Tu jahan rahe khushiyan ho paas,<br>
+Tere bina toh lagta hai sab kuchh udaas.<br>
+Happy birthday meri jaan dosti mein,<br>
+Tu hi toh reason hai mere smile ki har story mein.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 16:</h2>
+  <jjjj>
+   Birthday pe tujhe main rocket se udaa doon,<br>
+Chocolate ki baarish kara doon, ya tujhe ice-cream mein chhupa doon.<br>
+Tere jokes pe na hasna mushkil hai,<br>
+Tu serious ho jaye toh duniya hi pagal hai.<br>
+Tu rahe mast, swag mein talli,<br>
+Kyunki beastie tu hai meri — sab pe bhari!
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 17:</h2>
+  <jjjj>
+    Janamdin tera aaye toh sab kuchh chamak jaaye,<br>
+Tere naam ki mehfil mein dilon ka rang lag jaaye.<br>
+Na chai chahiye, na coffee,<br>
+Tu saath ho toh duniya bhi lagti hai softy.<br>
+Happy birthday meri stylish queen,<br>
+Tu smile kare toh duniya ho jaaye clean! 💖
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 18:</h2>
+  <jjjj>
+   Har pal tujhe hassata dekhna meri aadat hai,<br>
+Tere birthday pe tujhe khush rakhna meri ibadat hai.<br>
+Tu woh pyaara ehsaas hai jo har waqt saath hai,<br>
+Dilisha, tu nahi toh meri duniya hi kuchh khaas nahi.<br>
+Happy Birthday to my one and only beastie,<br>
+Tere sath life lagti hai thodi testy! 😂
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 19:</h2>
+  <jjjj>
+    Tu chale toh hawa bhi gungunaati hai,<br>
+Teri muskaan pe duniya bhi jhoom jaati hai.<br>
+Birthday ke din tu full-on chamak,<br>
+Tera swag dekhe toh TikTok bhi lage thak-thak!<br>
+Happy Birthday meri naaz,<br>
+Tu rahe hamesha cool, classy aur khaas! 😍
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 20:</h2>
+  <jjjj>
+   Tu meri dosti ka full-on shine hai,<br>
+Tere birthday pe sab bol rahe "She’s divine!"<br>
+Tere bina toh story bhi incomplete hai,<br>
+Tu likhe toh har moment elite hai.<br>
+Cake kha lena mere naam ka slice,<br>
+Kyunki tujhe miss karna meri daily advice!
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 21:</h2>
+  <jjjj>
+    Tere chehre ki roshni se sab ujala ho gaya,<br>
+Tere hasne se mere dil ka andhera mit gaya.<br>
+Tujh mein hai ek narmi, ek shiddat bhi chhupi,<br>
+Tere jaise dost ko pane ki dua bhi kabhi na chhuti.<br>
+Birthday ke is pal tu muskuraye sada,<br>
+Khushi ke is jahan mein tera dil rahe juda.<br>
+Bas tu yunhi khilta rahe har roz gulab ki tarah,<br>
+Tera har saal ho ek naye khwab ki tarah.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 22:</h2>
+  <jjjj>
+   Aankhon mein teri chamak hai sitaron jaisi,<br>
+Muskaan mein teri baat hai baharon jaisi.<br>
+Dil karta hai tujhe palkon pe rakhu,<br>
+Tere saath har ghadi khushi se bharku.<br>
+Birthday pe tujhe sab kuchh mile,<br>
+Jo tu chahe woh khuda tujh tak jhuke.<br>
+Teri zindagi ho chocolate se meethi,<br>
+Aur teri har yaad ho dil ko geeli karti preeti.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 23:</h2>
+  <jjjj>
+    Dilisha, tu sirf naam nahi ehsaas hai,<br>
+Teri dosti mere liye ek khaas pyaas hai.<br>
+Tere bina meri duniya adhoori lage,<br>
+Tu paas ho to har khushi poori lage.<br>
+Tera birthday hai to khushiyan sajti hain,<br>
+Teri hansi pe chandni bhi sharmati hai.<br>
+Bas ek baat kehna chahta hoon seedhe dil se,<br>
+Tu meri bestie hai, isse bada tohfa nahi mil se.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 24:</h2>
+  <jjjj>
+   Tu hai toh har lamha khubsurat hai,<br>
+Tere saath waqt bhi romantic surat hai.<br>
+Tere bina sab kuchh suna suna sa,<br>
+Par tu ho toh har ghadi khumaar wala sa.<br>
+Birthday pe tujhe sab pyaar de,<br>
+Zindagi tujhe har baar naye uphaar de.<br>
+Tu rahe hassi khushi har pal mein,<br>
+Teri yaad ho sabke kal mein.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 25:</h2>
+  <jjjj>
+    Kuch log hote hain dil se narm,<br>
+Dilisha tu hai waise hi ek soft charm.<br>
+Tera birthday aaye toh rang chhaye,<br>
+Har kona khushiyon se jhoom jaye.<br>
+Tere jokes pe duniya hansti rahe,<br>
+Tere kadam pe mohabbat basti rahe.<br>
+Tera chehra rahe noorani,<br>
+Zindagi ho teri ek pyari si satrangi.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 26:</h2>
+  <jjjj>
+   Madam ji aaj aapka birthday hai,<br>
+Dil karta hai aapke naam se ek mehfil sajaye.<br>
+Cutieee wali smile ho toh lagta hai chand jhuk gaya,<br>
+Aur sweetie jaise aap ho toh har din pyaar mein dhul gaya.<br>
+Aapki har ada pe dil fisal jaaye,<br>
+Aap ho jahan wahan sab kuchh khil jaaye.<br>
+Bas dua hai yeh khuda se roz,<br>
+Aapki zindagi ho ek khushiyo ka pose.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 27:</h2>
+  <jjjj>
+    Yarr, tu hai toh sab kuchh hai,<br>
+Teri har baat mein ek alag si khushbu hai.<br>
+Birthday tera hai par gift mujhe mil gaya,<br>
+Teri dosti ka lifafa dil ko sil gaya.<br>
+Teri awaaz mein nasha hai,<br>
+Aur tere naam mein pyar likha likha sa.<br>
+Tu jo muskura de, lagta hai har gham chhupa le,<br>
+Tu mere saath ho toh duniya ka har rang pa le.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 28:</h2>
+  <jjjj>
+   Sweetie jaisi tu hai, duniya mein koi nahi,<br>
+Teri smile ke aage to chaaand bhi royi nahi.<br>
+Birthday aaya toh dil ne khud party di,<br>
+Teri yaadon mein har khushi bunti si lagi.<br>
+Tu chale toh lagta hai hawa bhi thehar jaaye,<br>
+Aur jo tu hansi toh khuda bhi muskura jaaye.<br>
+Teri har baat mein hai ek nazakat,<br>
+Tu rahe khush, bas yeh dua hai meri aadat.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 29:</h2>
+  <jjjj>
+    Cutieee, tere birthday pe likh raha hoon yeh baat,<br>
+Tu hai sabse khaas, sabse unique tera sath.<br>
+Tere bolne ka style, tere gusse ki baat,<br>
+Sab kuchh tujh mein hai jo banaata hai tujhe raaj.<br>
+Teri dosti ek gift hai is dil ko,<br>
+Tu ho toh har khushi mile silsile ko.<br>
+Bas tu yahi rahe khilti hui,<br>
+Aur har saal aise hi pyari dikhti hui.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 30:</h2>
+  <jjjj>
+   Ma’am, aapka birthday aaye toh sab kuchh ruk jaaye,<br>
+Dil se duaayein nikle aur asmaan tak chali jaayein.<br>
+Tere jaise dosto se hi toh zindagi mein rang hai,<br>
+Tera hona mere liye ek khuda ka sang hai.<br>
+Tere bina adhoori thi yeh dosti ki kahaani,<br>
+Tere saath sab pal hai ek suhani nishani.<br>
+Bas itna kahu – you are amazing,<br>
+Tere bina ye duniya hoti boring aur hazing 😆
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 31:</h2>
+  <jjjj>
+    Tere birthday pe likh raha hoon pyaar bhari dastaan,<br>
+Tu hai dil ka sukoon, tu hai meri dosti ki nishan.<br>
+Teri muskurahat mein chhupi hai meri khushi,<br>
+Tere saath bitaye har pal lagta hai sabse sachi dosti.<br>
+Tere bina zindagi thodi adhuri si thi,<br>
+Par tu aayi toh har raah roshni se bhari si thi.<br>
+Tu bas khush rahe yahi dua hai baar-baar,<br>
+Kyunki tu hi meri dost, tu hi mera yarr.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 32:</h2>
+  <jjjj>
+   Jab tu pass hoti hai, duniya tham si jaati hai,<br>
+Dil dhadakta hai aur rooh muskuraati hai.<br>
+Birthday tera, par tu toh har din celebration hai,<br>
+Tere hone se hi toh har raat ek sensation hai.<br>
+Tu bole toh lagta hai ghanti baj gayi dil mein,<br>
+Tu hansi toh ghoomta hai pyaar ka jadoo silsil mein.<br>
+Dilisha, tera naam hi itna pyaara hai,<br>
+Ki likhne baithu toh har alfaaz hara hai.
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 33:</h2>
+  <jjjj>
+    Tu jaise khwabon ka ek haseen raaz ho,<br>
+Tere birthday pe lagta hai poora saaz ho.<br>
+Tere baalon mein ghul jaayein hawayein,<br>
+Tere kadam jahan padhein, wahan phool chha jaayein.<br>
+Meri har dua mein tu hi toh rehti hai,<br>
+Mere har shayari mein teri hi to sargam behti hai.<br>
+Tu dost hai, tu yaari hai, tu meri sab-kuchh hai,<br>
+Tu rahe har waqt mere paas – yahi bas tamanna hai.
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 34:</h2>
+  <jjjj>
+   Aayi birthday wali vibe, bajaa DJ full beat,<br>
+Cutie Dilisha kare smile, aur duniya ho defeat.<br>
+Tera andaaz hi aisa, sabko kar de silent,<br>
+Tu jahan jaye, wahan ho party violent! 😎<br>
+Ma’am ho, ya bestie, ya cute wali queen,<br>
+Tera level toh sabse upar, always evergreen! 💐
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 35:</h2>
+  <jjjj>
+    Madam ji ka birthday aaya, dil ne dance kiya,<br>
+Har lamha tere naam se romance kiya.<br>
+Sweetie si tu, par swag mein fire hai,<br>
+Tere liye toh pura Insta bhi inspire hai!<br>
+Janamdin pe tu full chill karein,<br>
+Aur duniya bole — "Yeh ladki toh killer hai be!"
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 36:</h2>
+  <jjjj>
+   Tu bestie hai meri, par kabhi kabhi queen lagti hai,<br>
+Birthday pe toh aur bhi dream lagti hai.<br>
+Tera attitude bhi sweet dish jaisa hai,<br>
+Aur smile? Bhai... full crush-type feel aata hai!<br>
+Yeh shayari tere liye, pyaar se likhi ,<br>
+Dilisha naam sunte hi duniya ruk jaye! 🩷
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 37:</h2>
+  <jjjj>
+    Cutie hai tu, isme koi shak nahi,<br>
+Sweetie wali smile, jo kabhi fake nahi.<br>
+Tere birthday pe tu full shine kare,<br>
+Har wish tere life mein fine kare.<br>
+Tu rahe awesome, har pal superstar,<br>
+Dil se likha — "Tu best hi beastie hai yarr!"
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 38:</h2>
+  <jjjj>
+   Tu hansi toh lage morning ka sunshine,<br>
+Tu roothi toh ho jaye poori duniya offline!<br>
+Birthday aaya tera, sab kuchh rangin ho gaya,<br>
+Teri ek post pe Instagram ka traffic freeze ho gaya 😜<br>
+Yeh bond jo humara hai, bada royal sa lagta hai,<br>
+Bestie wali yari, aaye hayee bada unique sa lagta hai! 😂
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 39:</h2>
+  <jjjj>
+    Tera birthday aaya, toh dil ne bola "Oye hoye!",<br>
+Madam ji  aaj lago-gi full cute toy! 😋<br>
+Smile teri full attract karegi,<br>
+Aur aankhon mein teri alag hi vibe dikhegi!<br>
+Waise toh tu bestie hai meri sweet si,<br>
+Par lagti crush wali... bas thodi elite si! 😜💘
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 40:</h2>
+  <jjjj>
+   Aaj birthday hai, toh kya main line maar lu halka sa?<br>
+Dosti ke naam pe hi sahi, ek smile le lu jara sa? 😅<br>
+Tu lage ice-cream, full tasty & cool,<br>
+Aur main hoon wo pagal, jo ho gaya full fool! 😝<br>
+Happy Birthday meri cutie, sweetie, bestie queen,<br>
+Tere jaisa koi nahi, tu hai dosti ki dream machine! ✨
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 41:</h2>
+  <jjjj>
+    Aaj toh tujhe dekh ke “uff yeh kya scene hai” bolu,<br>
+Birthday pe tu lag rahi hogi, full heroine ka mola! 🎬<br>
+Yeh dostana toh hai, par feelings thodi ud jaati hai,<br>
+Jab tu “madam ji” ban ke aankhon mein jhalakti hai!<br>
+Smile teri trending ho jaaye, bas ek reel bacha le meri! 😂
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 42:</h2>
+  <jjjj>
+   Birthday girl toh tu hai, par pose maine maar diya,<br>
+Dosti mein hi sahi, par thoda crush waala pyaar diya. 💌<br>
+Teri aankhon mein woh sparkle hai jisme dil fissal jaaye,<br>
+Aur teri hasi mein woh magic hai, jo har stress mit jaaye!<br>
+Chill scene hai, par tu hoti hai toh heart beat fast ho jaaye! 🥵😅
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 43:</h2>
+  <jjjj>
+    Dekh cutie, flirting light hai, dosti tight hai,<br>
+Tu samjhdar hai, tujh mein full bright light hai!<br>
+Tere birthday pe main chill nahi reh sakta,<br>
+Teri ek look pe hi reel ban jaaye, main kya keh sakta! 😂<br>
+Tu bestie hai meri, par tera vibe hai romantic,<br>
+Shayari bhi sochti hogi — “yeh ladki toh cinematic!” 🎬
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 44:</h2>
+  <jjjj>
+   Madam ji ka birthday hai, aur mai chill ka king,<br>
+Par tu saamne aaye toh heartbeat kare “ting-ting”! 🔥<br>
+Dosti mein bhi kuch toh khumaar hai tera,<br>
+Tere “hii” ka bhi apna hi asar hai ghera! 😅<br>
+Tu bestie hai meri, par sochta hoon kabhi kabhi,<br>
+Kaash flirt allowed hota… toh bolta "meri baby tu hi!" 😉💘
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 45:</h2>
+  <jjjj>
+    Cutie ke birthday pe full style mein entry maaro,<br>
+Uske cute dimples pe ek shayari vaar karo! 😍<br>
+Smile teri Google se bhi zyada useful hai,<br>
+Aur tera mood full-time colourful hai! 🌈<br>
+Tere saath chill karna best vibe hai,<br>
+Madam ji, tu hi meri dosti ki pride hai! 😌👑
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 46:</h2>
+  <jjjj>
+   Aankhon mein teri ek alag hi shine hai,<br>
+Har style tera, jaise Valentine ka sign hai! 💖<br>
+Waise toh tu best friend wali feeling deti hai,<br>
+Par kabhi kabhi crush wali bechaini bhi leti hai! 😝<br>
+Tu jitni pyaari lagti hai aaj-kal,<br>
+Utni sweet toh meri chai bhi nahi lage-gi aaj! ☕
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 47:</h2>
+  <jjjj>
+   Tu birthday girl hai, main tera special guest,<br>
+Tu lagti hai Barbie, par real life mein best! 👑<br>
+Yeh dostana meri jaan, bada zabardast hai,<br>
+Par flirt karna tujhmein bhi ek alag hi mast hai! 😉<br>
+Smile kar cutieee, aaj toh tera day hai,<br>
+Tera birthday hai, aur meri bhi safe play line hai! 😂
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 48:</h2>
+  <jjjj>
+    Sweetie, tu hai wo joke jo heart ko hasata hai,<br>
+Par kabhi kabhi tu crush jaisi feeling lata hai! 💘<br>
+Birthday pe lag rahi hogi dreamy queen,<br>
+Tere jaisa koi nahi — tu hai ekdam clean & keen! 🧁<br>
+Dosti mein bhi tere saath ek alag rang hai,<br>
+Madam ji, tu hi meri bestie wali tang hai! 😅
+  </jjjj>
+<hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 49:</h2>
+  <jjjj>
+   Tere cute expressions ka main fan ho gaya,  <br>
+Tere birthday pe toh full tension ho gaya 😅  <br>
+Tu bolti hai "bas dosti hai", par smile kuchh aur kehti hai,  <br>
+Aree ma'am, aise mat dekho… dil ghabra ke behka rehta hai 😁💖
+  </jjjj>
+  <hr class="custom-hr">
+  <h2 class="gv">🎂 Shayari 50:</h2>
+  <jjjj>
+    Tere jaise dost zindagi mein ek baar aate hain,  <br>
+Jo sirf saath nahi, har pal mein muskaan bhar jaate hain... <br> 
+Teri har hansi meri shayariyon ka mood ban jaati hai,  <br>
+Aur teri narazgi meri khamoshi se baatein kar jaati hai...<br>  <br>
+
+Tujhe paake laga dosti bhi kisi dua se milti hai,  <br>
+Kuch baatein likhi nahi jaati, bas mehsoos hoti hain...  <br>
+Kuch rishtay kehkar nahi, nibha kar dikhaye jaate hain,  <br>
+Tu meri life ka woh hissa hai, jiska naam shayariyon mein bhi mushkil hai...<br><br>  
+
+Tere hone se har din ek gift lagta hai,  <br>
+Tu paas ho ya door, tu hi meri dosti ka noor 💫💖  <br>
+Happy Birthday, meri cutie bestie...  <br>
+Tu jaisi hai, waise hi perfect hai 🎂
+
+  </jjjj>
+</div>
+ 
+ <button onclick="goTo('k')">Back</button>
+    <button onclick="goTo('m')">Next</button>
+  
+</div>
+</div>
+   <div class="m" style="background: #000;">
+   <div class="last-page">
+  <h2>🌸 Last page, but not the least 🌸</h2>
+  <p>Ye sab sirf ek hi wajah se tha — <strong>tujhe khush dekhna</strong> 😊<br> Aur mujhe bharosa hai tu thoda toh muskayi hogi 💖</p>
+  <p>
+    Ab tu hi bata...<br>
+    🎵 Kaunsa song pasand aaya?<br>
+    📝 Kaunsi line, content, ya shayari dil ko choo gayi?<br>
+    Mujhe batana zaroor, okay? 😄
+  </p>
+  <p>Isi formate ka content fir aayega — sirf tujhe <strong>hasane aur khush rakhne</strong> ke liye 🥰<br> Thoda wait karna... aur haan, ek baat:</p>
+  <p><em>❤️‍🔥 Hamesha khush rehna, muskurate rehna... aur 3 baatein yaad rakhna:</em></p>
+
+  <ul>
+    <li>Jab bahut gussa aaye — kuch mat bolna uss waqt.</li>
+    <li>Jab bahut udaas ho — koi decision mat lena.</li>
+    <li>Jab bahut khush ho — kisi se koi wada mat karna.</li>
+  </ul>
+
+  <p>Agar kabhi bhi sad feel kare, toh bas is page ko dekh lena... 💌<br>
+  <strong>Happy Birthday Dilisha Ji 🎂✨</strong><br>
+  Thank you for visiting this page 💕</p>
+
+  <button onclick="goTo('l')">Back</button>
+</div>
+   </div>
+
+<script>
+function goTo(targetClass) {
+  document.querySelectorAll('.z, .a, .b, .c, .d, .e, .f, .g, .h, .i, .k, .l, .m').forEach(function(el) {
+    el.classList.remove('active');
+  });
+
+  document.querySelector('.' + targetClass).classList.add('active');
+}
+</script>
+</div>
+</body>
+</html>
