@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Pacifico&display=swap');
+
+
+
+.z {
+ background: radial-gradient(ellipse at bottom, #0d1a26, #00000061);
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    
+    align-items: center;
+    justify-content: center;
+}
+.ab {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    width: 100%;
+	margin-top: 30px;
+}
+
+.greetings {
+    font-size: 5.5rem;
+    font-weight: 900;
+    margin: 0.3em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Glow animation */
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.greetings:nth-of-type(1) > span {
+    animation-delay: calc(var(--i) * 0.2s);
+}
+.greetings:nth-of-type(2) > span {
+    animation-delay: calc(var(--i) * 0.2s + 1s);
+}
+.greetings:nth-of-type(3) > span {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    animation-delay: calc(var(--i) * 0.2s + 2s);
+}
+
+.greetings > span:nth-child(1) { --i: 1; }
+.greetings > span:nth-child(2) { --i: 2; }
+.greetings > span:nth-child(3) { --i: 3; }
+.greetings > span:nth-child(4) { --i: 4; }
+.greetings > span:nth-child(5) { --i: 5; }
+.greetings > span:nth-child(6) { --i: 6; }
+.greetings > span:nth-child(7) { --i: 7; }
+.greetings > span:nth-child(8) { --i: 8; }
+
+.description {
+    font-size: 1.5rem;
+    margin: 1.2em auto;
+    color: #ccc;
+    max-width: 90%;
+}
+
+.shayari {
+    font-size: 1.2rem;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 2em;
+    max-width: 90%;
+}
+
+
+
+@media screen and (max-width: 574px) {
+    .greetings {
+        font-size: 3rem;
+        flex-wrap: wrap;
+    }
+    .greetings:nth-of-type(3) > span {
+        font-size: 3.2rem;
+    }
+    .description {
+        font-size: 1.3rem;
+    }
+    .shayari {
+        font-size: 1rem;
+    }
+   
+}

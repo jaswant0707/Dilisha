@@ -1,0 +1,67 @@
+.colorful-heart {
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  animation: colorfulFall linear 1;
+  top: -10vh;
+}
+
+@keyframes colorfulFall {
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(100vh); }
+}
+
+svg.colorful-line {
+  fill: none;
+  stroke-width: 2;
+  animation: colorfulPulse 0.7s linear infinite alternate;
+}
+
+.spinning {
+  animation: spinning 3s linear infinite alternate;
+}
+
+@keyframes spinning {
+  from { transform: rotate(20deg); }
+  to { transform: rotate(-20deg); }
+}
+
+@keyframes colorfulPulse {
+  from { transform: translateY(0); }
+  to { transform: translateY(3px); }
+}
+.romantic-heart {
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  animation: romanticDrop linear 1;
+  top: -10vh;
+}
+
+@keyframes romanticDrop {
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(100vh); }
+}
+
+svg.red-line {
+  fill: none;
+  stroke: red;
+  stroke-width: 2;
+  animation: redFloat 0.7s linear infinite alternate;
+}
+
+.twister {
+  animation: twister 3s linear infinite alternate;
+}
+
+@keyframes twister {
+  from { transform: rotate(20deg); }
+  to { transform: rotate(-20deg); }
+}
+
+@keyframes redFloat {
+  from { transform: translateY(0); }
+  to { transform: translateY(3px); }
+}
