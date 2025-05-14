@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');       /* for cursive style */
+
+    .intro-screen {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+   
+
+    
+
+   .shayari-section {
+ font-family: cursive;
+    display: flex
+;
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    align-content: flex-start;  
+}
+
+.gv {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-left: -50%;
+}
+
+    jjjj {
+	 background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+ 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px); /* Glassmorphism effect */
+  color: white;
+      position: relative;
+	  font-size: 1.2rem;
+      margin: 20px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      line-height: 1.7;
+    }
+
+    jjjj::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      bottom: -1px;
+      width: 5px;
+      background-color: #505050;
+      border-radius: 2px;
+	  
+    }
+
+    @media screen and (max-width: 600px) {
+      jjjj {
+        font-size: 1.2rem;
+      }
+    }
+
+    

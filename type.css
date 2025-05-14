@@ -1,0 +1,34 @@
+  .ss {
+	 padding-top: 50px; 
+     padding-right: 20px; 
+     padding-bottom: 20px; 
+     padding-left: 20px;
+  }
+    
+    #headerContainer, #paragraphContainer {
+      visibility: hidden;
+      margin-top: 20px;
+      min-height: 1.2em;
+    }
+    #headerContainer { font-size: 2em; }
+    #paragraphContainer { font-size: 18px; line-height: 1.5; }
+
+    .heart-cursor {
+      display: inline-block;
+      color: red;
+      font-size: 18px;
+      animation: blink 0.8s infinite;
+      margin-left: 4px;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    #imageContainer, #buttonsContainer {
+      opacity: 0;
+      transition: opacity 1s ease;
+      margin-top: 20px;
+    }
+    #imageContainer.visible, #buttonsContainer.visible {
+      opacity: 1;
+    }
